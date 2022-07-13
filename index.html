@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales System</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <h1>Sales System</h1>
+    </header>
+    <main>
+        <content>
+            <div class="row">
+                <button id="sell">Fazer uma venda</button>
+            </div>
+            <div class="row">
+                Total de vendas: <span id="total">0</span> 
+            </div>
+        </content>
+        <div id="open" class="modal">
+            <div class="modal-content">
+                <div class="row">
+                    <p>Numero do pedido: <span id="orderNumber"></span> </p>
+                </div>
+                <div class="row">
+                    <hr>
+                    <label for="">Cliente </label> 
+                    <input type="text" id="client" placeholder="Escrever nome do cliente">
+                </div>
+                <div class="row">
+                    <hr>
+                    <label for=""> Produto</label>
+                    <input type="text" id="product" placeholder="Nome do produto">
+                    <input type="number" id="quantity" placeholder="Quantidade">
+                    <input type="number" id="value" placeholder="Valor unitário">
+                    <div class="row"> Valor total do item: <span id="totalItem"></span>
+                        <button id="add">
+                            Incluir
+                        </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <table border="1px">
+                        <thead>
+                            <td>Produto</td>
+                            <td>Quantidade</td>
+                            <td>Valor Unitário</td>
+                            <td>Valor total</td>
+                        </thead>
+                        <tbody id="tbody"></tbody>
+                    </table>
+                    <div class="row">
+                        <span class="text">Qtd. total de itens: <span id="quantityTotal"></span></span>
+                        <span class="text">Qtd. total do pedido: <span id="orderTotal"></span></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <hr>
+                    <button id="cancel">Cancelar</button>
+                    <button id="save">Salvar</button>
+                </div>
+            </div><!--fim modal content-->
+        </div> <!--fim modal-->
+    </main>
+    <script src="./index.js"></script>
+</body>
+</html>
