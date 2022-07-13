@@ -58,14 +58,13 @@ handleAdd.onclick = function(){
       +"<td>"+itemCopy.value+"</td>"
       +"<td>"+itemCopy.total+"</td>"
     +"</tr>";
-
+    
     document.getElementById("tbody").innerHTML += tr
     document.getElementById("totalItem").textContent = itemCopy.total
     document.getElementById("quantityTotal").textContent = order.products.length
     document.getElementById("orderTotal").innerHTML = order.total    
-
+    client
   // reset inputs
-    inputClient.value = ''
     inputProduct.value = ''
     inputQuantity.value = ''
     inputValue.value = ''
@@ -86,14 +85,21 @@ handleSave.onclick = function(){
     }
 
     document.getElementById("total").textContent = total
+    document.getElementById("client").innerHTML = ''
+    document.getElementById("tbody").innerHTML = ''
+    document.getElementById("totalItem").textContent = 0
+    document.getElementById("quantityTotal").textContent = 0
+    document.getElementById("orderTotal").innerHTML = 0 
 }
 
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-  if (event.target == cancel) {
+  if (event.target == modal || event.target == cancel) {
     modal.style.display = "none"
     orders = []
+    document.getElementById("client").innerHTML = ''
+    document.getElementById("tbody").innerHTML = ''
+    document.getElementById("totalItem").textContent = 0
+    document.getElementById("quantityTotal").textContent = 0
+    document.getElementById("orderTotal").innerHTML = 0 
   }
 }

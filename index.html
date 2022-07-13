@@ -25,25 +25,28 @@
                 <div class="row">
                     <p>Numero do pedido: <span id="orderNumber"></span> </p>
                 </div>
+                <hr>
                 <div class="row">
-                    <hr>
                     <label for="">Cliente </label> 
                     <input type="text" id="client" placeholder="Escrever nome do cliente">
                 </div>
+                <hr>
                 <div class="row">
-                    <hr>
                     <label for=""> Produto</label>
                     <input type="text" id="product" placeholder="Nome do produto">
                     <input type="number" id="quantity" placeholder="Quantidade">
                     <input type="number" id="value" placeholder="Valor unitário">
-                    <div class="row"> Valor total do item: <span id="totalItem"></span>
+                    <div class="row"> 
+                        <span>
+                            Valor total do item: <span id="totalItem">0</span> 
+                        </span>
                         <button id="add">
                             Incluir
                         </button>
                     </div>
                 </div>
                 <div class="row">
-                    <table border="1px">
+                    <table border="1px solid #000">
                         <thead>
                             <td>Produto</td>
                             <td>Quantidade</td>
@@ -53,12 +56,12 @@
                         <tbody id="tbody"></tbody>
                     </table>
                     <div class="row">
-                        <span class="text">Qtd. total de itens: <span id="quantityTotal"></span></span>
-                        <span class="text">Qtd. total do pedido: <span id="orderTotal"></span></span>
+                        <span class="text">Qtd. total de itens: <span id="quantityTotal">0</span></span>
+                        <span class="text">Qtd. total do pedido: <span id="orderTotal">0</span></span>
                     </div>
                 </div>
+                <hr>
                 <div class="row">
-                    <hr>
                     <button id="cancel">Cancelar</button>
                     <button id="save">Salvar</button>
                 </div>
